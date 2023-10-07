@@ -19,7 +19,7 @@ app.set("views", path_1.default.join(__dirname, "views"));
 // * Routes /files
 // app.use("/api/files", fileRouter);
 app.get("/upload", (req, res) => {
-    res.render("upload");
+    res.render("upload.ejs");
 });
 // Handle file upload and save file details to MongoDB
 app.post("/upload", multer_1.default.single("file"), async (req, res) => {
@@ -35,7 +35,7 @@ app.post("/upload", multer_1.default.single("file"), async (req, res) => {
 // Display uploaded files on the main page
 app.get("/", async (req, res) => {
     const files = await file_model_1.default.find().sort({ uploadedAt: -1 });
-    res.render("index", { files });
+    res.render("index.ejs", { files });
 });
 app.get("/download/:filename", (req, res) => {
     const filename = req.params.filename;
