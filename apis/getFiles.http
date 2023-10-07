@@ -1,1 +1,1 @@
-GET "localhost:80/"
+GET "http://localhost:3000/"

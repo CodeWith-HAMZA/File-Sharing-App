@@ -8,10 +8,7 @@ const DB_NAME = "FileSharingApp";
 const DB_URL = "mongodb+srv://HamzaJavedShaikh:12@cluster0.blo8xq3.mongodb.net/" + DB_NAME;
 const connectToDB = async () => {
     try {
-        const options = {
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        };
+        const options = {};
         await mongoose_1.default.connect(DB_URL, options);
         console.log("Connected to MongoDB");
     }

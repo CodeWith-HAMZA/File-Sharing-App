@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.handlePostFiles = void 0;
-let storage = ;
+const CustomResponse_1 = require("../utils/CustomResponse");
 function handlePostFiles(req, res) {
-    res.json({ ham: "ha" });
+    CustomResponse_1.customResponse.sendJSONResponse(res, { name: "hamza" }, 200);
 }
 exports.handlePostFiles = handlePostFiles;
